@@ -1,0 +1,111 @@
+package listadoble.adt;
+
+public class MainListaDoblementeLigada {
+	public static void main(String[] args) {
+		ListaDoblementeLigadaADT<Integer> lista = new ListaDoblementeLigadaADT<>();
+		lista.agregarAlFinal(30);
+		lista.transversal();
+		System.out.println(lista.getTamanio());
+		System.out.println("------------------------------");
+		lista.agregarAlInicio(20);
+		lista.transversal();
+		System.out.println("------------------------------");
+		lista.agregarDespuesDe(25, 1);
+		lista.transversal();
+		System.out.println(lista.getTamanio());
+		System.out.println("------------------------------");
+		lista.agregarAlFinal(34);
+		lista.agregarAlFinal(46);
+		lista.agregarAlInicio(65);
+		lista.transversal();
+		System.out.println(lista.getTamanio());
+		System.out.println(lista.getElementoAnterior(4));
+		System.out.println(lista.getElementoSiguiente(4));
+		System.out.println("------------------------------");
+		System.out.println(lista.getTamanio());
+		lista.agregarDespuesDe(10, 1);
+		lista.transversal();
+		System.out.println(lista.getTamanio());
+		lista.agregarDespuesDe(12, 6);
+		lista.transversal();
+		System.out.println(lista.getElemento(8));
+		System.out.println(lista.getElementoSiguiente(8));
+		System.out.println(lista.getElementoAnterior(8));
+		System.out.println(lista.getTamanio());
+		System.out.println("------------------------------");
+		lista.eliminar(3);
+		lista.transversal();
+		System.out.println(lista.getElementoSiguiente(2));
+		System.out.println(lista.getElementoAnterior(2));
+		System.out.println(lista.getElemento(2));
+		System.out.println(lista.getTamanio());
+		System.out.println("------------------------------");
+		lista.eliminarElPrimero();
+		lista.transversal();
+		System.out.println(lista.getTamanio());
+		System.out.println("------------------------------");
+		lista.transversal();
+		System.out.println(lista.getTamanio());
+		System.out.println(lista.getElementoSiguiente(5));
+		System.out.println(lista.getElementoAnterior(5));
+		System.out.println(lista.getElemento(5));
+		lista.eliminarElUltimo();
+		lista.transversal();
+		System.out.println(lista.getTamanio());
+		System.out.println("------------------------------");
+		lista.transversal();
+		System.out.println(lista.getElementoSiguiente(2));
+		System.out.println(lista.getElementoAnterior(2));
+		System.out.println(lista.getElemento(2));
+		System.out.println(lista.getTamanio());
+		System.out.println("------------------------------");
+		lista.transversal();
+		System.out.println(lista.buscar(120));
+		System.out.println(lista.getTamanio());
+		System.out.println("------------------------------");
+		lista.actualizarPorValor(10, 20);
+		lista.transversal();
+		System.out.println(lista.getTamanio());
+		lista.actualizarPorValor(20, 10);
+		lista.transversal();
+		System.out.println(lista.getTamanio());
+		System.out.println("------------------------------");
+		lista.actualizarPorposicion(1, 26);
+		lista.transversal();
+		lista.actualizarPorposicion(1, 10);
+		lista.transversal();
+		System.out.println(lista.getTamanio());
+		System.out.println("------------------------------");
+		lista.agregarDespuesDe(90,2);
+		lista.transversal();
+		lista.eliminar(3);
+		lista.transversal();
+		int contador = lista.getTamanio();
+		for (int i = 1; i <= contador; i++) {
+			lista.transversal();
+			System.out.println(lista.getTamanio());
+			System.out.println("Nodo "+ i);
+			System.out.println(lista.getElemento(i));
+			System.out.println(lista.getElementoAnterior(i));
+			System.out.println(lista.getElementoSiguiente(i));
+			
+		}
+		lista.eliminar(4);
+		lista.transversal();
+		System.out.println(lista.getElemento(3));
+		System.out.println(lista.getElementoAnterior(3));
+		System.out.println(lista.getElementoSiguiente(3));
+		System.out.println(lista.getTamanio());
+		
+		lista.agregarAlFinal(45);
+		lista.transversal();
+		lista.eliminar(5);
+		lista.transversal();
+		System.out.println(lista.getElemento(1));
+		System.out.println(lista.getElementoAnterior(1));
+		System.out.println(lista.getElementoSiguiente(1));
+		System.out.println(lista.getTamanio());
+		lista.transversal();
+		
+	}
+}
